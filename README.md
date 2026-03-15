@@ -1,6 +1,24 @@
-# ⚡ PowerShell System Benchmark Suite
+# ⚡ Gorstak Benchmark
 
-> A comprehensive system benchmarking tool written entirely in PowerShell — test your CPU, Memory, Disk, GPU, and Network performance with a single script.
+**Version 3.0** — Desktop app + PowerShell script.
+
+> Benchmark your CPU, Memory, Disk, GPU, and Network. Run the **Windows desktop app** (recommended) or the **PowerShell script**.
+
+---
+
+## 🖥️ v3.0 Desktop App (recommended)
+
+- **Benchmark.exe** — .NET 4.8 Windows app, dark theme, pie chart, share/export, bottleneck hint, screenshot.
+- **Build:** `build.bat` (requires .NET 4.8; uses `Autorun.ico` and `app.manifest`).
+- **Run:** `Benchmark.exe`. Close the window during a run to cancel gracefully.
+
+---
+
+## 📜 PowerShell Script (original)
+
+```powershell
+.\Benchmark.ps1
+```
 
 ---
 
@@ -136,7 +154,15 @@ Results are compared against reference scores calibrated for a typical mid-range
 
 ```
 Benchmark/
-├── Benchmark.ps1    # Main benchmark script
+├── Benchmark.ps1      # PowerShell benchmark script
+├── Benchmark.exe      # Desktop app (build with build.bat)
+├── Program.cs         # App entry
+├── MainForm.cs        # UI, chart, share, screenshot
+├── BenchmarkEngine.cs # Benchmark logic
+├── BenchmarkResults.cs
+├── app.manifest
+├── build.bat
+├── Autorun.ico
 └── README.md
 ```
 
